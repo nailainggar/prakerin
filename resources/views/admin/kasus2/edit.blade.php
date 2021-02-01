@@ -14,13 +14,7 @@
                 'selectedKecamatan'=>$kasus2->rw->desa->id_kecamatan, 'selectedKota'=>$kasus2->rw->desa->kecamatan->id_kota,
                 'selectedProvinsi'=>$kasus2->rw->desa->kecamatan->kota->id_provinsi])
                       </div>
-                        <div class ="form-group"><
-                          <label for="" > Pilih Rw</label>
-                          <select name="id_rw" class=" form-control " require>
-                          @foreach($rw as $data)
-                          <option value="{{$data->id}}"> {{$data->nama_rw}} </option>
-                          @endforeach
-                        </select></div>
+                       
 
                 
                     <div class="form-group">

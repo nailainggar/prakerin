@@ -10,6 +10,7 @@ class Provinsi extends Model
     protected $fillable = [
         'kode_provinsi',
         'nama_provinsi',    
+        
     ];
 
     public function Kota(){

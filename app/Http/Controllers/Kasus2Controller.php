@@ -12,6 +12,20 @@ class Kasus2Controller extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @return \Illuminate\Http\Response<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Kasus;
+use App\Models\Rw;
+use Illuminate\Http\Request;
+use App\Http\Controllers\DB;
+
+class KasusController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -60,7 +74,7 @@ class Kasus2Controller extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Kasus2  $kasus2
+     * @param  \App\Models\Kasus  $kasus
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -72,7 +86,7 @@ class Kasus2Controller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Kasus2  $kasus2
+     * @param  \App\Models\Kasus  $kasus
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -86,18 +100,18 @@ class Kasus2Controller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Kasus2  $kasus2
+     * @param  \App\Models\Kasus  $kasus
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Request $request, $id)
     {
         $validate = $request->validate([
-            'positif' => 'required|unique:kasus2',
-            'sembuh' => 'required|unique:kasus2',
-            'meninggal' => 'required|unique:kasus2',
-            'tanggal' => 'required|unique:kasus2',
+            'positif' => 'required|unique:kasus2s',
+            'sembuh' => 'required|unique:kasus2s',
+            'meninggal' => 'required|unique:kasus2s',
+            'tanggal' => 'required|unique:kasus2s',
         ]);
-        $kasus2= new Kasus2();
+        $kasus2= new Kasus();
         $kasus2->id_rw = $request->id_rw;
         $kasus2->positif = $request->positif;
         $kasus2->sembuh = $request->sembuh;
@@ -111,14 +125,16 @@ class Kasus2Controller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Kasus2  $kasus2
+     * @param  \App\Models\Kasus  $kasus
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $kasus2 = Kasus2::findOrFail($id);
+        $kasus2 = Kasus::findOrFail($id);
         $kasus2->delete();
         return redirect()->route('kasus2.index')->with(['success'=>'Data <b>', $kasus2->positif, $kasus2->sembuh, $kasus2->meninggal,  $kasus2->tanggal, '</b>berhasil dihapus']);
     
     }
 }
+
+    

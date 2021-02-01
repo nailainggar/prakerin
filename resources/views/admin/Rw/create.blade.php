@@ -20,18 +20,17 @@
                     <div class="form-group">
                       <label for="">Kode Rw</label>
                       <input type="text"  name="kode_rw" class="form-control" require>
-                      @error('kode_rw')
-                          <div class="alert alert-danger">{{ $message }}</div>
-                          @enderror
+                      @if($errors->has('kode_rw'))
+                            <span class="text-danger">{{ $errors->first('kode_rw') }}</span>
+                        @endif
 
                     </div>
                     <div class="form-group">
                       <label for="">Rw</label>
                       <input type="text"  name="nama_rw"  class="form-control" require>
-                      @error('kode_rw')
-                          <div class="alert alert-danger">{{ $message }}</div>
-                          @enderror
-
+                      @if($errors->has('nama_rw'))
+                            <span class="text-danger">{{ $errors->first('nama_rw') }}</span>
+                        @endif
                     </div>
                     <div class="form-group">
                       <button type="submit" class="btn btn-primary btn-block">Simpan</button>

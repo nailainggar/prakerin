@@ -20,16 +20,16 @@
                     <div class="form-group">
                       <label for="">Kode Kecamatan</label>
                       <input type="text"  name="kode_kecamatan" class="form-control" require>
-                      @error('kode_kecamatan')
-                          <div class="alert alert-danger">{{ $message }}</div>
-                          @enderror
+                      @if($errors->has('kode_kecamatan'))
+                            <span class="text-danger">{{ $errors->first('kode_kecamatan') }}</span>
+                        @endif
                     </div>
                     <div class="form-group">
                       <label for="">Nama Kecamatan</label>
                       <input type="text"  name="nama_kecamatan"  class="form-control" require>
-                      @error('kode_kecamatan')
-                          <div class="alert alert-danger">{{ $message }}</div>
-                          @enderror
+                      @if($errors->has('nama_kecamatan'))
+                            <span class="text-danger">{{ $errors->first('nama_kecamatan') }}</span>
+                        @endif
                     </div>
                     <div class="form-group">
                       <button type="submit" class="btn btn-primary btn-block">Simpan</button>
