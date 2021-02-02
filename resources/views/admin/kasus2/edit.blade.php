@@ -19,19 +19,19 @@
                 
                     <div class="form-group">
                       <label for="">Positif</label>
-                      <input type="text"  name="positif" class="form-control" value="{{$kasus2->positif}}" require>
+                      <input type="text"  name="positif" class="form-control" value="{{$kasus2->positif}}" required>
                     </div>
                     <div class="form-group">
                       <label for="">Sembuh</label>
-                      <input type="text"  name="sembuh"  class="form-control" value="{{$kasus2->sembuh}}" require>
+                      <input type="text"  name="sembuh"  class="form-control" value="{{$kasus2->sembuh}}" required>
                     </div>
                     <div class="form-group">
                       <label for="">Meninggal</label>
-                      <input type="text"  name="meninggal"  class="form-control" value="{{$kasus2->meninggal}}" require>
+                      <input type="text"  name="meninggal"  class="form-control" value="{{$kasus2->meninggal}}" required>
                     </div>
                     <div class="form-group">
                       <label for="">Tanggal</label>
-                      <input type="date"  name="tanggal"  class="form-control" value="{{$kasus2->tanggal}}" require>
+                      <input type="date"  name="tanggal"  class="form-control" value="{{$kasus2->tanggal}}" required>
                     </div>
                     <div class="form-group">
                       <button type="submit" class="btn btn-primary btn-block">Simpan</button>

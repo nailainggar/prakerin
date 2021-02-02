@@ -10,7 +10,7 @@
                 @endif
                 <div class="card">
                     <div class="card-header">
-                    <center><b>{{ __('Data Kasus2 ') }}</b></center>
+                    <center><b>{{ __('Data Kasus ') }}</b></center>
                     </div>
                     
                     <div class="card-body">

@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                        Data Kasus2
+                        Data Kasus
                 <a href="{{route('kasus2.create')}}" class="btn btn-primary float-right">
                          Tambah
                 </a>
