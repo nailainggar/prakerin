@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Provinsi;
+use Illuminate\Support\Facades\DB;
 use Validator; 
 
 class ProvinsiController extends Controller

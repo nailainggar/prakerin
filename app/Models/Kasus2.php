@@ -8,7 +8,7 @@ use App\Rw;
 
 class Kasus2 extends Model
 {
-    protected $table = "kasus2s";
+   
     protected $fillable = [
         'positif',
         'meninggal',

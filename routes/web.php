@@ -56,7 +56,7 @@ Route::group(['prefix' => 'admin', 'middleware'=>['auth']],function  (){
     Route::resource('kecamatan',KecamatanController::class);
     Route::resource('desa',DesaController::class);
     Route::resource('rw',RwController::class);
-    Route::resource('kasus2',KasusController::class);
+    Route::resource('kasus',KasusController::class);
     Route::resource('kasus2',Kasus2Controller::class);
 
 });

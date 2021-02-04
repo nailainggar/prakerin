@@ -3,17 +3,17 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-            Edit Data 
+            Edit Data Kasus
             </div>
                  <div class="card-body">
-                    <form action="{{route('kasus2.update'  ,$kasus2->id)}}" method="post">
+                    <form action="{{route('kasus2.update'  ,$kasus2->id)}}" method="POST">
                        @method('put')
                         @csrf 
                         <div class="col">
                         @livewire('dropdowns', ['selectedRw'=>$kasus2->id_rw, 'selectedDesa'=>$kasus2->rw->id_desa,
-                'selectedKecamatan'=>$kasus2->rw->desa->id_kecamatan, 'selectedKota'=>$kasus2->rw->desa->kecamatan->id_kota,
-                'selectedProvinsi'=>$kasus2->rw->desa->kecamatan->kota->id_provinsi])
-                      </div>
+                        'selectedKecamatan'=>$kasus2->rw->desa->id_kecamatan, 'selectedKota'=>$kasus2->rw->desa->kecamatan->id_kota,
+                        'selectedProvinsi'=>$kasus2->rw->desa->kecamatan->kota->id_provinsi])
+                        </div>
                        
 
                 

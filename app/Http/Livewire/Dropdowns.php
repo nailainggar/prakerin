@@ -8,6 +8,7 @@ use App\Models\Kota;
 use App\Models\Kecamatan;
 use App\Models\Desa;
 use App\Models\Rw;
+use App\Models\Kasus;
 use App\Models\Kasus2;
 
 class Dropdowns extends Component
