@@ -2,6 +2,8 @@
 
 use App\Models\provinsi;
 use App\Models\kasus2;
+use App\Models\Desa;
+use App\Models\Rw;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProvinsiController;
@@ -31,5 +33,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 //ROUTE ApiController
-Route::get('provinsi',[ApiController::class, 'index']);
-Route::get('provinsi/{id}',[ApiController::class, 'show']);
+Route::get('kasus2',[ApiController::class, 'index']);
+// Route::get('hariini',[ApiController::class, 'hari']);
+Route::get('provinsikasus/{id}',[ApiController::class, 'provinsi']);
+Route::get('provinsikasus2',[ApiController::class, 'provinsikasus']);
