@@ -37,3 +37,13 @@ Route::get('kasus2',[ApiController::class, 'index']);
 // Route::get('hariini',[ApiController::class, 'hari']);
 Route::get('provinsikasus/{id}',[ApiController::class, 'provinsi']);
 Route::get('provinsikasus2',[ApiController::class, 'provinsikasus']);
+Route::get('kota',[ApiController::class, 'kota']);
+Route::get('kota2/{id}',[ApiController::class, 'kotaid']);
+Route::get('kec',[ApiController::class, 'kecamatan']);
+Route::get('kec2/{id}',[ApiController::class, 'kecid']);
+Route::get('desa',[ApiController::class, 'desa']);
+Route::get('desa2/{id}',[ApiController::class, 'desaid']);
+Route::get('rw',[ApiController::class, 'rw']);
+Route::get('rw2/{id}',[ApiController::class, 'rwid']);
+Route::get('hari',[ApiController::class, 'hari']);
+
