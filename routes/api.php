@@ -46,4 +46,4 @@ Route::get('desa2/{id}',[ApiController::class, 'desaid']);
 Route::get('rw',[ApiController::class, 'rw']);
 Route::get('rw2/{id}',[ApiController::class, 'rwid']);
 Route::get('hari',[ApiController::class, 'hari']);
-
+Route::get('global2',[ApiController::class, 'dunia']);

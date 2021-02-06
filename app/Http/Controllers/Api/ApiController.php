@@ -9,6 +9,7 @@ use App\Models\RW;
 use App\Http\Controllers\Controller;
 use DB;
 use Illuminate\Http\Request;
+use Http;
 
 class ApiController extends Controller
 {
@@ -348,4 +349,14 @@ public function hari()
     ];
     return response()->json($arr, 200);
 }
+public function dunia()
+    {
+        $response = Http::get('https://api.kawalcorona.com/global');
+            $data =$response->json();
+            return $data;
+            return response([
+                'Message' => ' Berhasil!',
+            ]);
+    }
+
 }
