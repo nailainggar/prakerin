@@ -22,9 +22,11 @@ use App\http\Controllers\Kasus2Controller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+use App\Http\Controllers\WellcomeController;
+Route::resource(' / ',WellcomeController::class); 
 
 Auth::routes();
 
