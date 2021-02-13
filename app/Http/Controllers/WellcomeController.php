@@ -44,7 +44,12 @@ class WellcomeController extends Controller
                          ->groupBy('nama_provinsi')->orderBy('nama_provinsi','ASC')
                          ->get();
 
-      
-  return view('frontend.welcome', compact('positif','sembuh','meninggal','front'));
+            $global = file_get_contents('https://api.kawalcorona.com/positif');
+            $getglobal = json_decode($global, TRUE);
+
+             // Table Global
+        $dataglobal= file_get_contents("https://api.kawalcorona.com/");
+        $globall = json_decode($dataglobal, TRUE);
+  return view('frontend.welcome', compact('positif','sembuh','meninggal','front','globall'));
     }
 }

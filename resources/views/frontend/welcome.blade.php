@@ -61,21 +61,21 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+                        <i class="fas fa-4x fa-plus text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Positif</h3>
                         <p class="text-muted mb-0">{{ number_format($positif) }}</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+                        <i class="fas fa-4x fa-smile -4x text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Sembuh</h3>
                         <p class="text-muted mb-0">{{ number_format($sembuh) }}</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+                        <i class="fas fa-4x fa-skull text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Meninggal</h3>
                         <p class="text-muted mb-0">{{ number_format($meninggal) }}</p>
                     </div>
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section><br>
 
 
 
@@ -156,83 +156,71 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section><br><br><br><br><br><br><br>
 
-    <!-- Portfolio-->
 
-    <div id="portfolio">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('frontend/assets/img/portfolio/fullsize/1.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/thumbnails/1.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('frontend/assets/img/portfolio/fullsize/2.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/thumbnails/2.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('frontend/assets/img/portfolio/fullsize/3.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/thumbnails/3.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('frontend/assets/img/portfolio/fullsize/4.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/thumbnails/4.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('frontend/assets/img/portfolio/fullsize/5.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/thumbnails/5.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('frontend/assets/img/portfolio/fullsize/6.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('frontend/assets/img/portfolio/thumbnails/6.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption p-3">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
+    <section id="global" class="global">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>
+                    <center>Data Kasus Dunia</center>
+                </h2>
+            </div>
+
+            <div class="row content" data-aos="fade-up">
+
+                <div class="table-wrapper-scroll-y my-custom-scrollbar col-lg-12">
+
+                    <table class="table table-bordered table-striped mb-0 " width="100%">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <center>No</center>
+                                </th>
+                                <th scope="col">
+                                    <center>Negara</center>
+                                </th>
+                                <th scope="col">
+                                    <center>Positif</center>
+                                </th>
+                                <th scope="col">
+                                    <center>Sembuh</center>
+                                </th>
+                                <th scope="col">
+                                    <center>Meninggal</center>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @php
+                                $no = 1;
+                            @endphp
+                            @foreach ($globall as $data)
+                                <tr>
+                                    <td> <?php echo $no++; ?></td>
+                                    <td> <?php echo $data['attributes']['Country_Region']; ?></td>
+                                    <td> <?php echo number_format($data['attributes']['Confirmed']); ?></td>
+                                    <td><?php echo number_format($data['attributes']['Recovered']); ?></td>
+                                    <td><?php echo number_format($data['attributes']['Deaths']); ?></td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+
+                    </table>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Call to action-->
-    <section class="page-section bg-dark text-white">
-        <div class="container text-center">
-            <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-            <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
+
         </div>
     </section>
+    <!-- ======== End Table Section Global ======= -->
+
+    <!-- Portfolio-->
+
+
+    <!-- Call to action-->
+
     <!-- Contact-->
     <section class="page-section" id="contact">
         <div class="container">
