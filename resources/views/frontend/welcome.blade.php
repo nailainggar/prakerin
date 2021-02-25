@@ -26,16 +26,18 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Tracking Covid</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#provinsi">Data Kasus Lokal</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#global">Data Kasus Global</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Kontak</a></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +45,7 @@
     <!-- Masthead-->
 
     <!-- About-->
-    <section class="page-section bg-primary" id="about">
+    <section class="page-section bg-primary" id="home">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
@@ -83,8 +85,8 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Made with Love</h3>
-                        <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                        <h3 class="h4 mb-2">Data Kasus Positif Dunia</h3>
+                        <p class="text-muted mb-0"><?php echo $getglobal['value']; ?></p>
                     </div>
                 </div>
             </div>
@@ -101,7 +103,7 @@
                 <h2>
                     <center>Data Kasus Indonesia Berdasarkan Provinsi</center>
                 </h2>
-            </div>
+            </div><br><br>
 
             <div class="row content" data-aos="fade up">
 
@@ -166,7 +168,7 @@
                 <h2>
                     <center>Data Kasus Dunia</center>
                 </h2>
-            </div>
+            </div><br><br>
 
             <div class="row content" data-aos="fade-up">
 
@@ -213,34 +215,93 @@
         </div>
 
         </div>
-    </section>
+    </section><br><br><br>
     <!-- ======== End Table Section Global ======= -->
 
-    <!-- Portfolio-->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
 
+            <div class="section-title">
+                <center>
+                    <h2>Tentang Covid-19</h2>
+                </center><br>
+                <p>COVID-19 (coronavirus disease 2019) adalah penyakit yang disebabkan oleh jenis coronavirus baru
+                    yaitu Sars-CoV-2, yang dilaporkan pertama kali di Wuhan Tiongkok pada tanggal 31 Desember 2019.
+                </p>
+            </div>
 
-    <!-- Call to action-->
+            <div class="row content">
+                <div class="col-lg-6">
+                    <p><b>
+                            Lindungi diri Anda dan orang lain di sekitar Anda dengan mengetahui fakta-fakta terkait
+                            virus ini dan mengambil langkah pencegahan yang sesuai. Ikuti saran yang diberikan oleh
+                            otoritas kesehatan setempat, adapun cara untuk mencegah agar terhindar dari virus
+                            covid-19
+                        </b></p>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i> Cuci tangan Anda secara rutin. Gunakan sabun dan
+                            air, atau cairan pembersih tangan berbahan alkohol.</li>
+                        <li><i class="ri-check-double-line"></i> Selalu jaga jarak aman dengan orang yang batuk atau
+                            bersin</li>
+                        <li><i class="ri-check-double-line"></i> Kenakan masker jika pembatasan fisik tidak
+                            dimungkinkan.</li>
+                        <li><i class="ri-check-double-line"></i> Jangan sentuh mata, hidung, atau mulut Anda.</li>
+                        <li><i class="ri-check-double-line"></i> Saat batuk atau bersin, tutup mulut dan hidung Anda
+                            dengan lengan atau tisu.</li>
+                        <li><i class="ri-check-double-line"></i> Jangan keluar rumah jika merasa tidak enak badan.
+                        </li>
+                        <li><i class="ri-check-double-line"></i> Jika demam, batuk, atau kesulitan bernapas, segera
+                            cari bantuan medis.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p><b>
+                            COVID-19 telah menelan banyak korban jiwa. Sebagai upaya penanggulangan penyebaran,
+                            penting
+                            sekali bagi kita untuk mengenali gejala infeksi virus Corona, terutama gejala awalnya di
+                            minggu pertama.
+                        </b></p>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i>Demam ≥380 C</li>
+                        <li><i class="ri-check-double-line"></i> Kelelahan atau lemas</li>
+                        <li><i class="ri-check-double-line"></i> Hilangnya kemampuan mengecap rasa atau mencium
+                            aroma</li>
+                        <li><i class="ri-check-double-line"></i> Sesak Napas.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End About Section -->
 
     <!-- Contact-->
     <section class="page-section" id="contact">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Let's Get In Touch!</h2>
+                    <h2 class="mt-0">Kontak</h2>
                     <hr class="divider my-4" />
-                    <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an
-                        email and we will get back to you as soon as possible!</p>
+                    <p class="text-muted mb-5"></p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                     <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                    <div>+1 (555) 123-4567</div>
+                    <div>
+                        <+1>+1 (555) 123-4567</b>
+                    </div>
+                </div>
+                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <i class="fas fa-location-arrow fa-3x mb-3 text-muted"></i>
+                    <div>Lokasi: <b>Jl.Soekarno hatta</b></div>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
                     <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
                     <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                    <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+                    <a class="d-block" href="mailto:contact@yourwebsite.com"><b>nailainggar25@gmail.com</b></a>
                 </div>
             </div>
         </div>

@@ -50,6 +50,6 @@ class WellcomeController extends Controller
              // Table Global
         $dataglobal= file_get_contents("https://api.kawalcorona.com/");
         $globall = json_decode($dataglobal, TRUE);
-  return view('frontend.welcome', compact('positif','sembuh','meninggal','front','globall'));
+  return view('frontend.welcome', compact('positif','sembuh','meninggal','front','globall','getglobal'));
     }
 }

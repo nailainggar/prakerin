@@ -15,7 +15,7 @@
                         <table class="table">
                         <tr>
                             <th>No</th>
-                            <th>Kode Kecamatan</th>
+                        
                             <th>Kecamatan</th>
                             <th>Aksi</th>
                         </tr>
@@ -23,7 +23,6 @@
                         @foreach($kecamatan as $data)
                         <tr> 
                             <td>{{$no++}}</td>
-                            <td>{{$data->kode_kecamatan}}</td>
                             <td>{{$data->nama_kecamatan}}</td>
                             <td>
                             <form action="{{route('kecamatan.destroy',$data->id)}}" method="post">
