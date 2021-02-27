@@ -7,11 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class ProvinsiSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+   
     public function run()
     {
         $provinsi = [
