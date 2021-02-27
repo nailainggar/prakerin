@@ -82,7 +82,7 @@
                         <p class="text-muted mb-0">{{ number_format($meninggal) }}</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                {{-- <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-heart text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Data Kasus Positif Dunia</h3>
@@ -90,7 +90,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </section><br>
 
 
@@ -198,7 +198,7 @@
                             @php
                                 $no = 1;
                             @endphp
-                            @foreach ($globall as $data)
+                            {{-- @foreach ($globall as $data)
                                 <tr>
                                     <td> <?php echo $no++; ?></td>
                                     <td> <?php echo $data['attributes']['Country_Region']; ?></td>
@@ -206,7 +206,7 @@
                                     <td><?php echo number_format($data['attributes']['Recovered']); ?></td>
                                     <td><?php echo number_format($data['attributes']['Deaths']); ?></td>
                                 </tr>
-                            @endforeach
+                            @endforeach --}}
                         </tbody>
 
                     </table>
